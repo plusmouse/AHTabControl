@@ -16,15 +16,15 @@ function AHTabControl.CommandHandler(tabId)
     for _, t in ipairs(disabled) do
       tabString = tabString .. t .. " "
     end
-    AHTabControl.Message("Currently hidden tabs: [" .. tabString .. "]")
+    AHTabControl.Message(AH_TAB_CONTROL_L_CURRENTLY_HIDDEN:format(" [" .. tabString .. "]"))
   else
     local index = AHTabControl.ArrayIndex(disabled, num)
 
     if index ~= nil then
-      AHTabControl.Message("Tab restored " .. num)
+      AHTabControl.Message(AH_TAB_CONTROL_L_RESTORE:format(num))
       table.remove(disabled, index)
     else
-      AHTabControl.Message("Tab hidden " .. num)
+      AHTabControl.Message(AH_TAB_CONTROL_L_HIDDEN:format(num))
       table.insert(disabled, num)
     end
 
