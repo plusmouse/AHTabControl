@@ -1,7 +1,6 @@
 AHTabControl = {}
 
 function AHTabControl.SetupCommand()
-  print("setup")
   SlashCmdList["zAHTabControl"] = AHTabControl.CommandHandler
   SLASH_zAHTabControl1 = "/ahtc"
   SLASH_zAHTabControl2 = "/ahtabcontrol"
