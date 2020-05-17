@@ -1,0 +1,12 @@
+## Interface: 80300
+## Title: AHTabControl
+## Version: 1
+## Author: plusmouse
+## Notes: Enable and disable auction house tabs
+## SavedVariables: AH_TAB_CONTROL_DISABLED_TABS
+
+Locales\Manifest.xml
+Source\Locales.lua
+Source\Main.lua
+Source\Mixins\Core.lua
+Source\Frames\Core.xml
