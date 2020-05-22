@@ -17,7 +17,7 @@ function AHTabControl.CommandHandler(tabId)
     end
     AHTabControl.Message(AH_TAB_CONTROL_L_CURRENTLY_HIDDEN:format(" [" .. tabString .. "]"))
   else
-    local index = AHTabControl.ArrayIndex(disabled, num)
+    local index = tIndexOf(disabled, num)
 
     if index ~= nil then
       AHTabControl.Message(AH_TAB_CONTROL_L_RESTORE:format(num))
@@ -35,14 +35,4 @@ end
 
 function AHTabControl.Message(message)
   print("|cc935e0ffAHTabControl|r: " .. message)
-end
-
-function AHTabControl.ArrayIndex(list, item)
-  for index, cmp in ipairs(list) do
-    if cmp == item then
-      return index
-    end
-  end
-
-  return nil
 end

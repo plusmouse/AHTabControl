@@ -27,7 +27,7 @@ function AHTabControlFrameMixin:HideTabs()
   for i, tab in ipairs(AuctionHouseFrame.Tabs) do
     tab:Show()
 
-    if Auctionator.Utilities.ArrayIndex(disable, i) ~= nil then
+    if tIndexOf(disable, i) ~= nil then
       tab:Hide()
     elseif left == nil then
       if i ~= 1 then
